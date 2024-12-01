@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = ["day-*"]
+
+[profile.bench]
+debug = true
+
+[workspace.dependencies]
+dhat = "0.3.2"
+anyhow = "1.0.75"
+rstest = "0.23.0"
+itertools = "0.13.0"
+petgraph = "0.6.4"
+criterion = "0.5.1"
+
+[profile.flamegraph]
+inherits = "release"
+debug = true
+
+[profile.dhat]
+inherits = "release"
+debug = 1

@@ -1,0 +1,19 @@
+[package]
+name = "day-1-historian-histerya"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+dhat-heap = []
+
+[dependencies]
+dhat.workspace = true
+anyhow.workspace = true
+rstest.workspace = true
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[[bench]]
+name = "benchmark"
+harness = false
