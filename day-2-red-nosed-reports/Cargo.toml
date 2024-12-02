@@ -1,0 +1,20 @@
+[package]
+name = "day-2-red-nosed-reports"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+dhat-heap = []
+
+[dependencies]
+dhat.workspace = true
+anyhow.workspace = true
+rstest.workspace = true
+itertools.workspace = true
+
+[dev-dependencies]
+criterion.workspace = true
+
+[[bench]]
+name = "benchmark"
+harness = false
