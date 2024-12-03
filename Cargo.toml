@@ -12,6 +12,7 @@ rstest = "0.23.0"
 itertools = "0.13.0"
 petgraph = "0.6.4"
 criterion = "0.5.1"
+regex = "1.11.1"
 
 [profile.flamegraph]
 inherits = "release"

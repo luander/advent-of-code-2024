@@ -1,0 +1,20 @@
+[package]
+name = "day-3-mull-it-over"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+dhat-heap = []
+
+[dependencies]
+dhat.workspace = true
+anyhow.workspace = true
+rstest.workspace = true
+regex.workspace = true
+
+[dev-dependencies]
+criterion.workspace = true
+
+[[bench]]
+name = "benchmark"
+harness = false
