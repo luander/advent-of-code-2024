@@ -6,7 +6,6 @@ pub fn process(input: &str) -> anyhow::Result<u32> {
     input.lines().for_each(|line| {
         r.captures_iter(line).for_each(|cap| {
             total += cap[1].parse::<u32>().unwrap() * cap[2].parse::<u32>().unwrap();
-            dbg!(&cap);
         });
     });
 

@@ -27,16 +27,16 @@ pub fn process(input: &str) -> anyhow::Result<u32> {
                 let asc2 = report
                     .iter()
                     .enumerate()
-                    .filter(|&(j, _)| dbg!(j) != i)
+                    .filter(|&(j, _)| j != i)
                     .tuple_windows()
-                    .all(|((_, a), (_, b))| dbg!(dbg!(a) < dbg!(b)) && dbg!((b - a).abs() <= 3));
+                    .all(|((_, a), (_, b))| a < b && (b - a).abs() <= 3);
                 let desc2 = report
                     .iter()
                     .enumerate()
-                    .filter(|&(j, _)| dbg!(j) != i)
+                    .filter(|&(j, _)| j != i)
                     .tuple_windows()
                     .all(|((_, a), (_, b))| a > b && (a - b).abs() <= 3);
-                p2_safe = p2_safe || (dbg!(asc2) || dbg!(desc2));
+                p2_safe = p2_safe || (asc2 || desc2);
             });
         }
 
